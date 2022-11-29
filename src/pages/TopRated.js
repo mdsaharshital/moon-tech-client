@@ -27,7 +27,7 @@ const TopRated = () => {
 
   return (
     <div className="">
-      <h1 className="pl-6">Top rated products</h1>
+      <h1 className="pl-6 text-3xl font-bold">Top rated products</h1>
       {content}
     </div>
   );
