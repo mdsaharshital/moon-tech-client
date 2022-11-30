@@ -38,6 +38,18 @@ export const prodcutReducer = (state, action) => {
         ...state,
         wishlist: [...state.wishlist, action.payload],
       };
+    case ActionType.DELETE_WISHLIST:
+      return {
+        ...state,
+        wishlist: [
+          ...state.wishlist.filter((item) => item._id !== action.payload._id),
+        ],
+      };
+    case ActionType.DELETE_CART:
+      return {
+        ...state,
+        cart: [...state.cart.filter((item) => item._id !== action.payload._id)],
+      };
 
     default:
       return state;
